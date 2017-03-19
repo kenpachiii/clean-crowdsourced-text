@@ -5,10 +5,6 @@ Performs spelling correction in US English (using the word frequency information
 provided by the Brown corpus), expands contractions (e.g. it's to it is), 
 translates numbers into words, removes html tags and non-ascii characters.
 
-There are a number of python packages available that would make this task easier 
-(e.g. num2words), but clearly it makes more sense to write my own scripts for 
-this excercise. 
-
 Author: Nico De Tullio
 """
 from txtcleaner import num2words, spell, formatter, tokenizer
@@ -52,7 +48,6 @@ text_clean = formatter(text_sp)
 
 print "Write cleaned text to 'cleaned_text.txt'..."
 with io.open('./cleaned_text.txt', 'w', encoding='utf-8') as fid:
-#with open('./cleaned_text.txt', 'w') as fid:
     fid.write(text_clean)
 
 print "Done."
